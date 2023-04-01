@@ -14,7 +14,7 @@ const ProjectsGrid = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-screen-lg mx-auto">
         {projects.map((project) => (
           <div key={project.id}>
-            <div className="bg-white p-4 rounded-lg shadow-md border border-white">
+            <div className="bg-white p-4 rounded-lg shadow-md border border-white transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-2xl">
               <div className="flex justify-center">
                 <img
                   src={project.img}
@@ -24,9 +24,15 @@ const ProjectsGrid = () => {
               </div>
               <h3 className="font-medium text-lg mb-2">{project.title}</h3>
               <p className="text-sm mb-2">{project.category}</p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow">
+              <div className="flex flex-wrap mb-4">
+                <button className="bg-red-900 ">{project.tag}</button>
+              </div>
+              <a
+                className="bg-blue-500 hover:bg-blue-600 text-indigo-900 px-4 py-2 rounded-lg shadow cursor-pointer"
+                href={project.url}
+              >
                 Demo Live
-              </button>
+              </a>
             </div>
           </div>
         ))}

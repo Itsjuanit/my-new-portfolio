@@ -14,7 +14,7 @@ const AppBanner = () => {
       transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2"
     >
-      <div className="w-full md:w-1/3 text-left">
+      <div className="w-full md:w-2/3 text-left">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -25,7 +25,7 @@ const AppBanner = () => {
           }}
           className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
         >
-          Hi, Iam Juan Ignacio Tejada
+          Juan Ignacio Tejada
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ const AppBanner = () => {
           }}
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          A Front End Developer
+          Desarrollador Front End
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ const AppBanner = () => {
           >
             <FiArrowRightCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowRightCircle>
             <span className="text-sm sm:text-lg font-general-medium duration-100">
-              My CV
+              Mi CV
             </span>
           </a>
         </motion.div>

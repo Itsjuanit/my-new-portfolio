@@ -1,10 +1,10 @@
 export const aboutMeData = [
   {
     id: 1,
-    bio: "My name is Juan Ignacio Tejada, I am 27 years old, and I am a Junior Front End Developer with strong problem-solving skills and teamwork abilities, with a lot of ambition to contribute knowledge and learn more about the industry.",
+    bio: "Mi nombre es Juan Ignacio Tejada, tengo 27 años, y soy un Desarrollador Front End Junior con sólidas habilidades para resolver problemas y trabajar en equipo, con mucha ambición de aportar conocimiento y aprender más sobre la industria.",
   },
   {
     id: 2,
-    bio: "My skills are in HTML5, CSS3, Sass, JavaScript, Vue.js, React.js, Git/Github, and UX/UI. I also have knowledge in Agile methodologies such as Scrum and Kanban.",
+    bio: "Tengo conocimientos en HTML5, CSS3, Sass, JavaScript, Vue.js, React.js, Git/Github, y UX/UI. También tengo conocimientos en metodologías Agile como Scrum y Kanban.",
   },
 ];

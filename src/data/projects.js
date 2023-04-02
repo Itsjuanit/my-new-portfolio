@@ -28,9 +28,10 @@ export const projectsData = [
   {
     id: 1,
     title: "Vet App",
-    category: "Web Application",
+    category:
+      "Web App, que esta pensada para que las veterinarias, registren sus pacinetes y puedan tener un control de sus citas, vacunas y medicamentos",
     img: Caja,
-    url: "",
+    url: "https://caja-solidaria-project-master.vercel.app/",
     tag: "React",
   },
   {

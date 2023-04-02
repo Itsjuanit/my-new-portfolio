@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { ProjectsContext } from "../../context/ProjectsContext";
+import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 
 const ProjectsGrid = () => {
   const { projects } = useContext(ProjectsContext);
+  const [activeTheme] = useThemeSwitcher();
 
   return (
     <section className="py-5 sm:py-10 mt-5 sm:mt-10 min-h-screen">
@@ -22,14 +24,39 @@ const ProjectsGrid = () => {
                   className="h-full w-auto object-cover mb-4 rounded-lg shadow"
                 />
               </div>
-              <h3 className="font-medium text-lg mb-2">{project.title}</h3>
+              <h3
+                className="font-medium text-lg mb-2"
+                style={{ color: "#FF0000" }}
+              >
+                {project.title}
+              </h3>
               <p className="text-sm mb-2">{project.category}</p>
               <div className="flex flex-wrap mb-4">
-                <button className="bg-red-900 ">{project.tag}</button>
+                <button
+                  style={{
+                    backgroundColor:
+                      activeTheme === "dark" ? "#312E81" : "#fff",
+                    color: activeTheme === "dark" ? "#fff" : "#212121",
+                    paddingTop: "2px",
+                    paddingBottom: "2px",
+                    paddingLeft: "8px",
+                    paddingRight: "8px",
+                    borderRadius: "10px",
+                    fontSize: "10px",
+                    lineHeight: "1.2",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                  }}
+                >
+                  {project.tag}
+                </button>
               </div>
               <a
                 className="bg-blue-500 hover:bg-blue-600 text-indigo-900 px-4 py-2 rounded-lg shadow cursor-pointer"
                 href={project.url}
+                target="_blank"
+                rel="noreferrer"
               >
                 Demo Live
               </a>

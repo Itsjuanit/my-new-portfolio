@@ -32,25 +32,29 @@ const ProjectsGrid = () => {
               </h3>
               <p className="text-sm mb-2">{project.category}</p>
               <div className="flex flex-wrap mb-4">
-                <button
-                  style={{
-                    backgroundColor:
-                      activeTheme === "dark" ? "#312E81" : "#fff",
-                    color: activeTheme === "dark" ? "#fff" : "#212121",
-                    paddingTop: "2px",
-                    paddingBottom: "2px",
-                    paddingLeft: "8px",
-                    paddingRight: "8px",
-                    borderRadius: "10px",
-                    fontSize: "10px",
-                    lineHeight: "1.2",
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
-                    letterSpacing: "1px",
-                  }}
-                >
-                  {project.tag}
-                </button>
+                {project.tag.split(",").map((tag) => (
+                  <button
+                    key={tag}
+                    style={{
+                      backgroundColor:
+                        activeTheme === "dark" ? "#312E81" : "#fff",
+                      color: activeTheme === "dark" ? "#fff" : "#212121",
+                      paddingTop: "2px",
+                      paddingBottom: "2px",
+                      paddingLeft: "8px",
+                      paddingRight: "8px",
+                      borderRadius: "10px",
+                      fontSize: "10px",
+                      lineHeight: "1.2",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                      letterSpacing: "1px",
+                      marginRight: "5px",
+                    }}
+                  >
+                    {tag}
+                  </button>
+                ))}
               </div>
               <a
                 className="bg-blue-500 hover:bg-blue-600 text-indigo-900 px-4 py-2 rounded-lg shadow cursor-pointer"

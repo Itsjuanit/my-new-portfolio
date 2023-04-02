@@ -40,7 +40,7 @@ export const projectsData = [
     category: "Mobile Application",
     img: Courflix,
     url: "",
-    tag: "React",
+    tag: "React, Vue",
   },
   {
     id: 3,
